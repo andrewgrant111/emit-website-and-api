@@ -11,7 +11,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
-var drugdb;
+var database;
 
 // Connect to the database before starting the application server.
 var MongoClient = require('mongodb').MongoClient
@@ -22,15 +22,13 @@ MongoClient.connect('mongodb://127.0.0.1:27017/db', function (err, db) {
     } else {
         console.log("successfully connected to the database");
     }
-    
-    drugdb = db
+
+    database = db
 
     var server = app.listen(process.env.PORT || 80, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
-  }); 
-
-
+  });
 });
 
 // API Routes Below
@@ -46,8 +44,8 @@ function handleError(res, reason, message, code) {
  *
  */
 app.get("/api/v1/drugs", function(req, res){
-    
-    drugdb.collection('drugs_collection').find({}).toArray(function(err, docs) {
+
+    database.collection(DRUGS_COLLECTION).find({}).toArray(function(err, docs) {
 	if (err) {
 	    handleError(res, err.message, "Failed to get drugs.");
 	} else {
