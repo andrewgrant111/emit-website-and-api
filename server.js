@@ -16,7 +16,7 @@ var db;
 // Connect to the database before starting the application server.
 var MongoClient = require('mongodb').MongoClient
     , format = require('util').format;
-MongoClient.connect('mongodb://127.0.0.1:27017/test', function (err, db) {
+MongoClient.connect('mongodb://127.0.0.1:27017/db', function (err, db) {
     if (err) {
         throw err;
     } else {
@@ -24,7 +24,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017/test', function (err, db) {
     }
     //db.close();
 
-    var server = app.listen(process.env.PORT || 8080, function () {
+    var server = app.listen(process.env.PORT || 80, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
   }); 
@@ -73,6 +73,9 @@ app.get("/api/v1/drugs", function(req, res){
   });
 });
 
+app.get("/api/helloworld", function(req,res){
+    res.send("Hello World!");
+});
 
 // app.post("/drugs", function(req, res) {
 //   var newDrug = req.body;
