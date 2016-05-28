@@ -11,7 +11,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
-var db;
+var drugdb;
 
 // Connect to the database before starting the application server.
 var MongoClient = require('mongodb').MongoClient
@@ -22,7 +22,8 @@ MongoClient.connect('mongodb://127.0.0.1:27017/db', function (err, db) {
     } else {
         console.log("successfully connected to the database");
     }
-    //db.close();
+    
+    drugdb = db
 
     var server = app.listen(process.env.PORT || 80, function () {
     var port = server.address().port;
@@ -31,25 +32,6 @@ MongoClient.connect('mongodb://127.0.0.1:27017/db', function (err, db) {
 
 
 });
-
-
-//mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
-//  if (err) {
-//    console.log(err);
-//    process.exit(1);
-//  }
-
-  // Save database object from the callback for reuse.
-//  db = database;
-//  console.log("Database connection ready");
-
-  // Initialize the app.
-//  var server = app.listen(process.env.PORT || 8080, function () {
-//    var port = server.address().port;
-//    console.log("App now running on port", port);
-//  });
-//});
-
 
 // API Routes Below
 
@@ -64,13 +46,14 @@ function handleError(res, reason, message, code) {
  *
  */
 app.get("/api/v1/drugs", function(req, res){
-    db.collection(DRUGS_COLLECTION).find({}).toArray(function(err, docs) {
-    if (err) {
-      handleError(res, err.message, "Failed to get drugs.");
-    } else {
-      res.status(200).json(docs);
-    }
-  });
+    
+    drugdb.collection('drugs_collection').find({}).toArray(function(err, docs) {
+	if (err) {
+	    handleError(res, err.message, "Failed to get drugs.");
+	} else {
+	    res.status(200).json(docs);
+	}
+    });
 });
 
 app.get("/api/helloworld", function(req,res){
