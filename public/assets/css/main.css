@@ -2622,7 +2622,7 @@ footer {
 }
 
 .indent {
-    text-indent: 20px;
+/*    text-indent: 20px;*/
 }
 
 @media screen and (min-width:2560px) {
