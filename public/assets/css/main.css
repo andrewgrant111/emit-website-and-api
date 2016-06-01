@@ -1316,12 +1316,30 @@
             border-bottom: solid 20px #fdd301;
         }
 
+        .box.orange {
+            border-bottom: solid 20px #fe5614;
+        }
+
         .box.teal {
             border-bottom: solid 20px #58b390;
         }
 
         .box span.highlight {
             color:#fc8b00;
+            font-size:1.2em;
+        }
+
+        .box a {
+            color:#fe5614;
+            text-decoration: underline;
+            -moz-transition: color .25s ease-in-out;
+            -webkit-transition: color .25s ease-in-out;
+            -ms-transition: color .25s ease-in-out;
+            transition: color .25s ease-in-out;
+        }
+
+        .box a:hover {
+            color:#fdd301;
         }
 
 		.box .image.featured {
@@ -1799,6 +1817,12 @@
 			margin: 0;
 		}
 
+/* Disclaimer */
+
+    #disclaimer {
+        font-size:0.8em;
+    }
+
 /* Desktop */
 
 	@media screen and (min-width: 737px) {
@@ -1957,7 +1981,6 @@
                 background-color:rgb(136,193,2);
                 height:4.75em;
                 padding-top:1em;
-                padding-left:5em;
             }
 			#nav > ul {
 				margin: 0; 
@@ -2052,13 +2075,14 @@
 
 			#banner {
 				position: relative;
-				padding: 4em 0;
+				padding: 1em 0;
 				margin: 0 0 0 0;
             }
 
 				#banner header {
                     display: inline-block;
 					padding: 2.5em 5em;
+                    padding-top:0;
 					border-radius: 5px;
 				}
 
@@ -2071,6 +2095,10 @@
                         text-align: left;
                         text-indent: 50px;
 						font-size: 1.3em;
+					}
+        
+                    #banner header img {
+                        width:25%;
 					}
 
 		/* Intro */
@@ -2095,8 +2123,8 @@
 				}
 
 				#intro section {
-					margin: 3em 0;
-					padding: 3em 0;
+					margin: 1em 0;
+					padding: 1em 0;
 				}
 
 				#intro h2 {
@@ -2223,7 +2251,7 @@
 		/* Banner */
 
 			#banner {
-				padding: 6em 0;
+				padding: 2em 0;
 				margin: 0 0 0 0;
 			}
 
@@ -2583,7 +2611,7 @@
 
 			#banner {
 				margin: 0 0 4em 0 !important;
-				padding: 6em 0;
+				padding: 2em 0;
 			}
 
 				#banner header {
@@ -2598,6 +2626,10 @@
 
 					#banner header p {
 						font-size: 1.2em;
+					}
+        
+                    #banner header img {
+						width:80%;
 					}
 
 		/* Copyright */
