@@ -2112,6 +2112,7 @@
             #intro a {
                     text-decoration: none;
                     background-color:#FE5614;
+                line-height:40px;
 					-moz-transition: background-color .25s ease-in-out;
 						-webkit-transition: background-color .25s ease-in-out;
 						-ms-transition: background-color .25s ease-in-out;
@@ -2574,14 +2575,29 @@
 
 				#intro section {
 					position: relative;
+                    background-color:#fe5614;
 					border-top: solid 1px #dfdfdf;
-					padding: 2.5em 0 0 0;
-					margin: 1.5em 0 0 0 !important;
+					padding: 2.5em;
+					margin: 0em !important;
 				}
+                #intro section header h2 a {
+                    color:#fff;
+                    font-size:2em;
+                    text-decoration:none;
+                    line-height:40px;
+                    background-color:#FE5614;
+					-moz-transition: background-color .25s ease-in-out;
+						-webkit-transition: background-color .25s ease-in-out;
+						-ms-transition: background-color .25s ease-in-out;
+						transition: background-color .25s ease-in-out;
+                }
+                
+                #intro section header h2 a:hover {
+                    background-color:#ff3d01;
+                }
 
 					#intro section.first {
 						border-top: 0;
-						padding-top: 0;
 					}
 
 					#intro section p {
