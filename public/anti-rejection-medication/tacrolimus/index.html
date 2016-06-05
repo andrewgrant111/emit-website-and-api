@@ -247,5 +247,44 @@
 			<script src="../../../assets/js/main.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="../../../assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            $(function () {
+    var $panel = $('<div class="panel">13</div>');
+    var slickOpts = {
+        dots: true,
+          slidesToShow: 1,
+          
+           responsive: [{ 
+            breakpoint: 500,
+            settings: {
+            arrows: false
+        } 
+           }]
+    };
+    // Init the slick
+    $('#dashboard').slick(slickOpts);
+     
+    var beforePrint = function() {
+        $('#dashboard').unslick();
+    };
+    var afterPrint = function() {
+        console.log('Functionality to run after printing');
+    };
+
+    if (window.matchMedia) {
+        var mediaQueryList = window.matchMedia('print');
+        mediaQueryList.addListener(function(mql) {
+            if (mql.matches) {
+                beforePrint();
+            } else {
+                afterPrint();
+            }
+        });
+    }
+
+    window.onbeforeprint = beforePrint;
+    window.onafterprint = afterPrint;
+    });
+        </script>
 	</body>
 </html>
