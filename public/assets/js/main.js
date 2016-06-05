@@ -4,44 +4,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-$(function () {
-    var $panel = $('<div class="panel">13</div>');
-    var slickOpts = {
-        dots: true,
-          slidesToShow: 1,
-          
-           responsive: [{ 
-            breakpoint: 500,
-            settings: {
-            arrows: false
-        } 
-           }]
-    };
-    // Init the slick
-    $('#dashboard').slick(slickOpts);
-     
-    var beforePrint = function() {
-        $('#dashboard').unslick();
-    };
-    var afterPrint = function() {
-        console.log('Functionality to run after printing');
-    };
-
-    if (window.matchMedia) {
-        var mediaQueryList = window.matchMedia('print');
-        mediaQueryList.addListener(function(mql) {
-            if (mql.matches) {
-                beforePrint();
-            } else {
-                afterPrint();
-            }
-        });
-    }
-
-    window.onbeforeprint = beforePrint;
-    window.onafterprint = afterPrint;
-    });
-
 (function($) {
 
 	skel
