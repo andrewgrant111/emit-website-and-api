@@ -1069,7 +1069,7 @@
 /* Basic */
 
 	body {
-		background: #333333; /* #6b9800 */
+		background: #212121; /* #6b9800 */
 		font-family: 'Open Sans', sans-serif; 
 		font-weight: 400;
 		color: #5d5d5d;
@@ -1955,7 +1955,7 @@
 			}
 
 				#footer-wrapper header {
-					margin: 0 0 3em 0;
+					margin: 0 0 1em 0;
 				}
 
 					#footer-wrapper header h2 {
@@ -2228,11 +2228,11 @@
 			}
 
 			#footer-wrapper {
-				padding: 3em 0 3em 0;
+				padding: 1em 0 1em 0;
 			}
 
 				#footer-wrapper:before {
-					height: 2.5em;
+					height: 1.5em;
 				}
 
 				#footer-wrapper header {
@@ -2562,7 +2562,7 @@
 			}
 
 			#footer-wrapper {
-				padding: 2em 25px;
+				padding: 1em 25px;
 				overflow: hidden;
 				-webkit-transform: translateZ(0);
 			}
