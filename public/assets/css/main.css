@@ -1461,6 +1461,9 @@
 .image-table{
 margin-bottom: 0px;
 }
+.slider td:first-child, .slider td:last-child{
+width: 20%;
+}
 .image-table tr td:last-child{
     padding-left:20px;
 }

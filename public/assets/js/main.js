@@ -94,6 +94,7 @@
 $(footer).html("<div id=\"copyright\"><ul class=\"links\"><li>&copy; EMIT. All rights reserved.</li><li>Design: <a href=\"http://www.melissastacey.ca\" target=\"_blank\">Melissa Stacey</a></li><li>Template: <a href=\"http://html5up.net\" target=\"_blank\">HTML5 UP</a></li></ul><br><span id=\"disclaimer\">The information on this website is intended to supplement the advice given to you by your transplant team. There may be side effects or instructions that are not listed on this website. If you feel you need more information, please contact your transplant physician or clinical pharmacist.</span></div>");
 //analytics content
 
+
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
