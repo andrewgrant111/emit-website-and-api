@@ -16,26 +16,6 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <link rel="stylesheet" type="text/css" href="/assets/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="/assets/slick/slick-theme.css">
-  <style type="text/css">
-    .slider {
-        width: auto;
-        margin: 100px 50px;
-    }
-
-    .slick-slide {
-      margin: 20px;
-    }
-
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-        color: #fc8b00;
-        font-size:26px;
-    }
-  </style>
 	</head>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
@@ -77,26 +57,28 @@
                                 
                                     <h3>What are some possible side effects of this medication? </h3>
                                 <section class="slider">
-                                      <div>
+                                      <div id="dashboard">
+                                      <div class="row panel">
                                           <h3>Chest pain, coughing or wheezing</h3>
                                         <p>You will be given another inhaled medication (salbutamol) before the pentamidine to reduce this.</p>
                                         </div>
-                                      <div>
+                                      <div class="row panel">
                                           <h3>Decreased appetite</h3>
                                         <p>This is temporary, and wears off after a couple of days.</p>
                                         </div>
-                                      <div>
+                                      <div class="row panel">
                                           <h3>Dizziness/tiredness/fatigue</h3>
                                         <p>Breathe slowly; stop inhalation therapy if needed.</p>
                                         </div>
-                                      <div>
+                                      <div class="row panel">
                                           <h3>Cough and sore throat </h3>
                                           <p>Use throat lozenges or cough syrup if symptoms are very bothersome.</p>
                                         </div>
-                                    <div>
+                                    <div class="row panel">
                                           <h3>Bitter or metallic taste in the mouth</h3>
                                           <p>Rinse mouth immediately after the nebulized treatment.  If it occurs during treatment, you may stop the inhalation and take a drink of water.</p>
                                         </div>
+                                    </div>
 								</section>
 							</article>
 
@@ -129,21 +111,6 @@
 			<script src="/assets/js/main.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="/assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $(document).on('ready', function() {
-      $('.slider').slick({
-          dots: true,
-          slidesToShow: 1,
-          
-           responsive: [{ 
-            breakpoint: 500,
-            settings: {
-            arrows: false
-        } 
-           }]
-      });
-    });
-  </script>
 
 	</body>
 </html>

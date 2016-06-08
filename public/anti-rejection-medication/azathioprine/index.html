@@ -16,26 +16,6 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <link rel="stylesheet" type="text/css" href="/assets/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="/assets/slick/slick-theme.css">
-  <style type="text/css">
-    .slider {
-        width: auto;
-        margin: 100px 50px;
-    }
-
-    .slick-slide {
-      margin: 20px;
-    }
-
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-        color: #fc8b00;
-        font-size:26px;
-    }
-  </style>
 	</head>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
@@ -83,11 +63,12 @@
                                 
                                     <h3>What are some possible side effects of this medication? </h3>
                                 <section class="slider">
-                                      <div>
+                                      <div id="dashboard">
+                                      <div class="row panel">
                                           <h3>Nausea, vomiting, diarrhea</h3>
                                         <p>Take azathioprine with food. These side effects usually resolve with continued use. Notify your doctor if symptoms persist or are very bothersome.</p>
                                         </div>
-                                      <div>
+                                      <div class="row panel">
                                           <h3>Azathioprine can lower the number of your white blood cells, red blood cells and platelets. You may be at an increased risk for infection and bleeding.</h3>
                                         <p>Regular blood work will be done to check your blood cell counts. Check with your doctor if you have any:</p>
                                             <ul class="indent">
@@ -96,18 +77,19 @@
                                             <li>• Signs of decreased red blood cells (weakness or tiredness, fainting spells, light-headedness)</li>
                                                 </ul>
                                         </div>
-                                    <div>
+                                    <div class="row panel">
                                           <h3>Liver damage</h3>
                                         <p>This is an uncommon side effect. Notify your doctor if you experience yellow coloured skin or eyes or stomach or abdominal pain. You will have regular blood work done to monitor your liver function.</p>
                                         </div>
-                                    <div>
+                                    <div class="row panel">
                                           <h3>Hair thinning or loss</h3>
                                         <p>Check with your doctor if any of these are bothersome or persistent.</p>
                                         </div>
-                                    <div>
+                                    <div class="row panel">
                                           <h3>Cancer</h3>
                                         <p>Taking this medication may increase your risk of skin and other cancers. Please inform your transplant team if you are diagnosed with cancer. For additional information please see section on “Cancer Risk”.</p>
                                         </div>
+                                    </div>
 								</section>
 							</article>
 
@@ -140,21 +122,6 @@
 			<script src="/assets/js/main.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="/assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $(document).on('ready', function() {
-      $('.slider').slick({
-          dots: true,
-          slidesToShow: 1,
-          
-           responsive: [{ 
-            breakpoint: 500,
-            settings: {
-            arrows: false
-        } 
-           }]
-      });
-    });
-  </script>
 
 	</body>
 </html>

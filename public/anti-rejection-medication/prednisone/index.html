@@ -16,26 +16,6 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <link rel="stylesheet" type="text/css" href="/assets/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="/assets/slick/slick-theme.css">
-  <style type="text/css">
-    .slider {
-        width: auto;
-        margin: 100px 50px;
-    }
-
-    .slick-slide {
-      margin: 20px;
-    }
-
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-        color: #fc8b00;
-        font-size:26px;
-    }
-  </style>
 	</head>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
@@ -82,42 +62,44 @@
                                     <h3>What are some possible side effects of this medication? </h3>
                                 <p><b>NOTE:</b> Majority of the side effects only appear when prednisone, prednisolONE or methylprednisolone is taken at high doses for a long period of time.  When taken for short periods of time or at really low doses, most side effects are rare.</p>
                                 <section class="slider">
-                                      <div>
+                                      <div id="dashboard">
+                                      <div class="row panel">
                                           <h3>Heartburn or nausea, stomach ulcers</h3>
                                         <p>Take prednisone and prednisolone with food or milk. Your doctor may put you on a medication to protect your stomach (ranitidine (Zantac®) or pantoprazole (Tecta®)).</p>
                                         </div>
-                                      <div>
+                                      <div class="row panel">
                                           <h3>Swelling or high blood pressure</h3>
                                         <p>Avoid salty foods, elevate your feet when sitting, check your blood pressure regularly.</p>
                                         </div>
-                                    <div>
+                                    <div class="row panel">
                                           <h3>High blood sugars, especially in patients with diabetes</h3>
                                         <p>Check your blood sugar regularly if you are diabetic.</p>
                                         </div>
-                                    <div>
+                                    <div class="row panel">
                                           <h3>Increased appetite / weight gain</h3>
                                         <p>Eat healthy, well-balanced meals, eat foods that are lower in fat and avoid high calorie snacks like chips, chocolate bars and sugared drinks. Ask the dietitian to help you with an eating plan.</p>
                                         </div>
-                                    <div>
+                                    <div class="row panel">
                                           <h3>Bone loss (osteoporosis) can occur with long-term use</h3>
                                         <p>Taking calcium, vitamin D can help prevent osteoporosis.</p>
                                         </div>
-                                    <div>
+                                    <div class="row panel">
                                           <h3>Changes in behaviour including trouble sleeping, decreased mood, nightmares, nervousness</h3>
                                         <p>Other medications can be used to help with these symptoms if they are very bothersome.  </p>
                                         </div>
-                                    <div>
+                                    <div class="row panel">
                                           <h3>Vision changes, cataracts, glaucoma</h3>
                                         <p>It is important to have regular eye examinations.</p>
                                         </div>
-                                    <div>
+                                    <div class="row panel">
                                           <h3>Changes in appearance (rounder face, more fat deposits around waist and the back of the neck, stretch marks, acne on face, back and chest)</h3>
                                         <p>These symptoms usually appear if you take high doses for a prolonged period of time. These changes do not last long and will start to improve after your steroid dose is reduced.</p>
                                         </div>
-                                    <div>
+                                    <div class="row panel">
                                           <h3>Slower wound healing</h3>
                                         <p>Inform your transplant doctor if this becomes an issue.</p>
                                         </div>
+                                    </div>
 								</section>
 							</article>
 
@@ -150,21 +132,6 @@
 			<script src="/assets/js/main.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="/assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $(document).on('ready', function() {
-      $('.slider').slick({
-          dots: true,
-          slidesToShow: 1,
-          
-           responsive: [{ 
-            breakpoint: 500,
-            settings: {
-            arrows: false
-        } 
-           }]
-      });
-    });
-  </script>
 
 	</body>
 </html>

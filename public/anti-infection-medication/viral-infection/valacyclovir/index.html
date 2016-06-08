@@ -16,26 +16,7 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <link rel="stylesheet" type="text/css" href="/assets/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="/assets/slick/slick-theme.css">
-  <style type="text/css">
-    .slider {
-        width: auto;
-        margin: 100px 50px;
-    }
 
-    .slick-slide {
-      margin: 20px;
-    }
-
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-        color: #fc8b00;
-        font-size:26px;
-    }
-  </style>
 	</head>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
@@ -77,22 +58,24 @@
                                 
                                     <h3>What are some possible side effects of this medication? </h3>
                                 <section class="slider">
-                                      <div>
+                                      <div id="dashboard">
+                                      <div class="row panel">
                                           <h3>Upset stomach, nausea</h3>
                                         <p>Take with food or milk.</p>
                                         </div>
-                                      <div>
+                                      <div class="row panel">
                                           <h3>Diarrhea</h3>
                                         <p>Take with food or milk.</p>
                                         </div>
-                                      <div>
+                                      <div class="row panel">
                                           <h3>Nausea, vomiting, diarrhea.</h3>
                                         <p>May resolve, but inform your doctor if symptoms persist. </p>
                                         </div>
-                                    <div>
+                                    <div class="row panel">
                                           <h3>Headache</h3>
                                         <p>May resolve. Your doctor may suggest an over-the-counter painkiller.  </p>
                                         </div>
+                                    </div>
 								</section>
 							</article>
 
@@ -125,21 +108,6 @@
 			<script src="/assets/js/main.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="/assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $(document).on('ready', function() {
-      $('.slider').slick({
-          dots: true,
-          slidesToShow: 1,
-          
-           responsive: [{ 
-            breakpoint: 500,
-            settings: {
-            arrows: false
-        } 
-           }]
-      });
-    });
-  </script>
 
 	</body>
 </html>

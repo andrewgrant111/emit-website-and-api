@@ -89,6 +89,45 @@
 
 })(jQuery);
 
+//Slick slider
+ $(function () {
+    var $panel = $('<div class="panel">13</div>');
+    var slickOpts = {
+        dots: true,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+           responsive: [{ 
+            breakpoint: 500,
+            settings: {
+            arrows: false
+        } 
+           }]
+    };
+    // Init the slick
+    $('#dashboard').slick(slickOpts);
+     
+    var beforePrint = function() {
+        $('#dashboard').unslick();
+    };
+    var afterPrint = function() {
+        console.log('Functionality to run after printing');
+    };
+
+    if (window.matchMedia) {
+        var mediaQueryList = window.matchMedia('print');
+        mediaQueryList.addListener(function(mql) {
+            if (mql.matches) {
+                beforePrint();
+            } else {
+                afterPrint();
+            }
+        });
+    }
+
+    window.onbeforeprint = beforePrint;
+    window.onafterprint = afterPrint;
+    });
+
 //Navigation links
 $("#nav").html("<nav id=\"nav\"><ul><li><a href=\"/\">Home</a></li><li><a href=\"/general-medication-info/\">General Medication Info</a><ul><li><a href=\"/general-medication-info/rejection\">Rejection</a></li><li><a href=\"/general-medication-info/vaccination-after-transplant/\">Vaccination After Transplant</a></li><li><a href=\"/general-medication-info/over-the-counter-medication/\">Over-the-Counter Medication</a></li><li><a href=\"/general-medication-info/cyotoxic-safety-precautions/\">Cytotoxic Safety Precautions</a></li><li><a href=\"/general-medication-info/dental-protocol/\">Dental Protocol</a></li><li><a href=\"/general-medication-info/cancer-risks/\">Cancer Risks</a></li></ul></li><li><a href=\"/anti-rejection-medication/\">Anti-Rejection Medication</a><ul><li><a href=\"/anti-rejection-medication/tacrolimus/\">Tacrolimus</a></li><li><a href=\"/anti-rejection-medication/mycophenolate/\">Mycophenolate</a></li><li><a href=\"/anti-rejection-medication/azathioprine/\">Azathioprine</a></li><li><a href=\"/anti-rejection-medication/cyclosprine/\">Cyclosprine</a></li><li><a href=\"/anti-rejection-medication/prednisone/\">Prednisone</a></li><li><a href=\"/anti-rejection-medication/sirolimus/\">Sirolimus</a></li></ul></li><li><a href=\"/anti-infection-medication/\">Anti-Infection Medication</a><ul><li><a href=\"/anti-infection-medication/bacterial-infection/\">Bacterial Infection</a></li><li><a href=\"/anti-infection-medication/fungal-infection/\">Fungal  Infection</a><ul><li><a href=\"/anti-infection-medication/fungal-infection/sulfamethoxazole-trimethoprim\">Sulfamethoxazole / Trimethoprim</a></li><li><a href=\"/anti-infection-medication/fungal-infection/pentamidine\">Pentamidine</a></li><li><a href=\"/anti-infection-medication/fungal-infection/dapsone\">Dapsone</a></li><li><a href=\"/anti-infection-medication/fungal-infection/fluconazole\">Fluconazole</a></li></ul></li><li><a href=\"/anti-infection-medication/viral-infection/\">Viral  Infection</a><ul><li><a href=\"/anti-infection-medication/viral-infection/valganciclovir\">Valganciclovir</a></li><li><a href=\"/anti-infection-medication/viral-infection/valacyclovir\">Valacyclovir</a></li><li><a href=\"/anti-infection-medication/viral-infection/lamivudine\">Lamivudine</a></li></ul></li></ul></li><li><a href=\"/about\">About Us</a></li></ul></nav>");
 
