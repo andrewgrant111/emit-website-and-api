@@ -95,13 +95,13 @@
     var slickOpts = {
         dots: true,
         slidesToShow: 1,
-        adaptiveHeight: true,
-           responsive: [{ 
-            breakpoint: 500,
-            settings: {
-            arrows: false
-        } 
-           }]
+        adaptiveHeight: true
+//           responsive: [{ 
+//            breakpoint: 500,
+//            settings: {
+//            arrows: false
+//        } 
+//           }]
     };
     // Init the slick
     $('#dashboard').slick(slickOpts);
