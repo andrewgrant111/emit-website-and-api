@@ -43,7 +43,8 @@
                                     </div>
                             <div class="6u 12u(mobile)">
                                 <section>
-                                    <form method="post" action="MAILTO:hello@melissastacey.ca">
+                                    <div id="form-messages"></div>
+                                    <form id="ajax-contact" action="assets/php/mail.php" method="POST">
 									<div class="row 50%">
 										<div class="6u 12u(mobile)">
 											<input name="name" placeholder="Name" type="text">
@@ -90,13 +91,14 @@
         </div>
 
 		<!-- Scripts -->
-			<script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/jquery-2.1.0.min.js"></script>
 			<script src="/assets/js/jquery.dropotron.min.js"></script>
 			<script src="/assets/js/skel.min.js"></script>
 			<script src="/assets/js/skel-viewport.min.js"></script>
 			<script src="/assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="/assets/js/main.js"></script>
+        <script src="/assets/js/app.js"></script>
         <script>
             function initMap() {
                 var myLatlng = new google.maps.LatLng(49.282322,-123.116076);
