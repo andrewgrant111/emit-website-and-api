@@ -16,17 +16,67 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header-wrapper">
 					<div id="header">
-
+				
 						<!-- Nav -->
-							<nav id="nav"><!-- Defined in main.js --></nav>
+                        <nav id="nav">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+									<li>
+										<a href="/general-medication-info/">General Medication Info</a>
+										<ul>
+											<li><a href="/general-medication-info/rejection">Rejection</a></li>
+											<li><a href="/general-medication-info/vaccination-after-transplant/">Vaccination After Transplant</a></li>
+                                            <li><a href="/general-medication-info/over-the-counter-medication/">Over-the-Counter Medication</a></li>
+                                            <li><a href="/general-medication-info/cyotoxic-safety-precautions/">Cytotoxic Safety Precautions</a></li>
+											<li><a href="/general-medication-info/dental-protocol/">Dental Protocol</a></li>
+                                            <li><a href="/general-medication-info/cancer-risks/">Cancer Risks</a></li>
+										</ul>
+									</li>
+									<li>
+                                        <a href="/anti-rejection-medication/">Anti-Rejection Medication</a>
+                                        <ul>
+											<li><a href="/anti-rejection-medication/tacrolimus/">Tacrolimus</a></li>
+											<li><a href="/anti-rejection-medication/mycophenolate/">Mycophenolate</a></li>
+											<li><a href="/anti-rejection-medication/azathioprine/">Azathioprine</a></li>
+                                            <li><a href="/anti-rejection-medication/cyclosporine/">Cyclosporine</a></li>
+                                            <li><a href="/anti-rejection-medication/prednisone/">Prednisone</a></li>
+                                            <li><a href="/anti-rejection-medication/sirolimus/">Sirolimus</a></li>
+                                        </ul>
+                                    </li>
+									<li class="current">
+                                        <a href="/anti-infection-medication/">Anti-Infection Medication</a>
+                                        <ul>
+											<li><a href="/anti-infection-medication/bacterial-infection/">Bacterial Infection</a></li>
+											<li>
+                                                <a href="/anti-infection-medication/fungal-infection/">Fungal Infection</a>
+                                                <ul>
+                                                    <li><a href="/anti-infection-medication/fungal-infection/sulfamethoxazole-trimethoprim/">Sulfamethoxazole / Trimethoprim</a></li>
+                                                    <li><a href="/anti-infection-medication/fungal-infection/pentamidine/">Pentamidine</a></li>
+                                                    <li><a href="/anti-infection-medication/fungal-infection/dapsone/">Dapsone</a></li>
+                                                    <li><a href="/anti-infection-medication/fungal-infection/fluconazole/">Fluconazole</a></li>
+                                                </ul>
+                                            </li>
+											<li class="current">
+                                                <a href="/anti-infection-medication/viral-infection/">Viral  Infection</a>
+                                                <ul>
+                                                    <li class="current"><a href="#">Valganciclovir</a></li>
+                                                    <li><a href="/anti-infection-medication/viral-infection/valacyclovir/">Valacyclovir</a></li>
+                                                    <li><a href="/anti-infection-medication/viral-infection/lamivudine/">Lamivudine</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                     <li><a href="/about/">About Us</a></li>
+<!--                                <li><a href="/contact/">Contact Us</a></li>-->
+                            </ul>
+                        </nav>
 
 					</div>
 				</div>
 
 			<!-- Main -->
-				<div id="main-wrapper">
+				<section class="wrapper style1">
 					<div class="container">
 
 						<!-- Content -->
@@ -50,18 +100,27 @@
 									</p>
 								</section>
                                 
-                                    <h3>What are some possible side effects of this medication? </h3>
-                                <section class="slider">
-                                      <div id="dashboard">
-                                      <div class="row panel">
+                                   <section class="wrapper style1">
+                                        <div class="container">
+                                        <h3>What are some possible side effects of this medication?</h3>
+                                        </div>
+                                    </section>
+            
+                                <section class="wrapper style1 slider">
+                                      <div class="row">
+                                          <section class="12u 12u(mobile)">
                                           <h3>Drowsiness or sleepiness </h3>
                                         <p>Do not drive, operate machinery or do tasks that require you to be alert until you know how this medication affects you. </p>
+                                          </section>
                                         </div>
-                                      <div class="row panel">
+                                      <div class="row">
+                                          <section class="12u 12u(mobile)">
                                           <h3>Nausea, vomiting, diarrhea</h3>
                                         <p>Take with food. Contact your doctor if this is persistent or bothersome. </p>
+                                          </section>
                                         </div>
-                                      <div class="row panel">
+                                      <div class="row">
+                                          <section class="12u 12u(mobile)">
                                           <h3>Valganciclovir can lower the number of your white blood cells, red blood cells and platelets. You may be at increased risk for infection and bleeding. </h3>
                                         <p>Regular bloodwork will be done to check your blood cell counts. Check with you doctor if you have any of the following: </p>
                                             <ul>
@@ -69,29 +128,24 @@
                                           <li>• Signs of bleeding such as bruising, black, tarry stools, vomiting of blood or blood in the urine </li>
                                           <li>• Signs of decreased red blood cells such as unusual weakness or tiredness, fainting spells, or light-headedness.</li>
                                         </ul>
+                                          </section>
                                         </div>
-                                    </div>
 								</section>
 							</article>
 
 					</div>
-				</div>
+				</section>
 
 			<!-- Footer -->
-				<div id="footer-wrapper">
-					<section id="footer" class="container">
-						<div class="row">
-							<div class="12u">
+				<div id="footer">
 
-								<!-- Copyright -->
-									<div id="footer"><!-- Defined in main.js --></div>
+					<!-- Social Icons -->
+                    <div class="icons"><!-- Defined in main.js --></div>
 
-							</div>
-						</div>
-					</section>
+					<!-- Copyright -->
+						<div class="copyright"><!-- Defined in main.js --></div>
+
 				</div>
-
-		</div>
 
 		<!-- Scripts -->
 			<script src="/assets/js/jquery.min.js"></script>

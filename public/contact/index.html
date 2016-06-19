@@ -14,91 +14,129 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header-wrapper">
 					<div id="header">
-                        
-                        <!-- Nav -->
-							<nav id="nav"><!-- Defined in main.js --></nav>
+				
+						<!-- Nav -->
+                        <nav id="nav">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+									<li>
+										<a href="/general-medication-info/">General Medication Info</a>
+										<ul>
+											<li><a href="/general-medication-info/rejection">Rejection</a></li>
+											<li><a href="/general-medication-info/vaccination-after-transplant/">Vaccination After Transplant</a></li>
+                                            <li><a href="/general-medication-info/over-the-counter-medication/">Over-the-Counter Medication</a></li>
+                                            <li><a href="/general-medication-info/cyotoxic-safety-precautions/">Cytotoxic Safety Precautions</a></li>
+											<li><a href="/general-medication-info/dental-protocol/">Dental Protocol</a></li>
+                                            <li><a href="/general-medication-info/cancer-risks/">Cancer Risks</a></li>
+										</ul>
+									</li>
+									<li>
+                                        <a href="/anti-rejection-medication/">Anti-Rejection Medication</a>
+                                        <ul>
+											<li><a href="/anti-rejection-medication/tacrolimus/">Tacrolimus</a></li>
+											<li><a href="/anti-rejection-medication/mycophenolate/">Mycophenolate</a></li>
+											<li><a href="/anti-rejection-medication/azathioprine/">Azathioprine</a></li>
+                                            <li><a href="/anti-rejection-medication/cyclosporine/">Cyclosporine</a></li>
+                                            <li><a href="/anti-rejection-medication/prednisone/">Prednisone</a></li>
+                                            <li><a href="/anti-rejection-medication/sirolimus/">Sirolimus</a></li>
+                                        </ul>
+                                    </li>
+									<li>
+                                        <a href="/anti-infection-medication/">Anti-Infection Medication</a>
+                                        <ul>
+											<li><a href="/anti-infection-medication/bacterial-infection/">Bacterial Infection</a></li>
+											<li>
+                                                <a href="/anti-infection-medication/fungal-infection/">Fungal  Infection</a>
+                                                <ul>
+                                                    <li><a href="/anti-infection-medication/fungal-infection/sulfamethoxazole-trimethoprim">Sulfamethoxazole / Trimethoprim</a></li>
+                                                    <li><a href="/anti-infection-medication/fungal-infection/pentamidine">Pentamidine</a></li>
+                                                    <li><a href="/anti-infection-medication/fungal-infection/dapsone">Dapsone</a></li>
+                                                    <li><a href="/anti-infection-medication/fungal-infection/fluconazole">Fluconazole</a></li>
+                                                </ul>
+                                            </li>
+											<li>
+                                                <a href="/anti-infection-medication/viral-infection/">Viral  Infection</a>
+                                                <ul>
+                                                    <li><a href="/anti-infection-medication/viral-infection/valganciclovir">Valganciclovir</a></li>
+                                                    <li><a href="/anti-infection-medication/viral-infection/valacyclovir">Valacyclovir</a></li>
+                                                    <li><a href="/anti-infection-medication/viral-infection/lamivudine">Lamivudine</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                     <li><a href="/about/">About Us</a></li>
+                                <li class="current"><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
                         
                     </div>
             </div>
                         <!-- Main -->
-				<div id="main-wrapper">
+				<div class="wrapper style1">
 					<div class="container">
 
 						<!-- Content -->
-							<article class="box post">
                                 <header>
                                     <h2>Contact</h2>
                                 </header>
                                 <div id="contact" class="row">
-                                    <div class="6u 12u(mobile)">
-                                        <section>
+                                    <section class="5u 12u(mobile)">
+                                        
                                             <b>Email:</b> info@emitcare.ca<br>
                                             <b>Location:</b> Vancouver, BC
-                                        </section>
-                                        <section>
+                
                                         <div id="map"></div>
-                                            </section>
-                                    </div>
-                            <div class="6u 12u(mobile)">
-                                <section>
-                                    <div id="form-messages"></div>
-                                    <form id="ajax-contact" action="/assets/php/mail.php" method="POST">
+                                            
+                                    </section>
+                                <section class="7u 12u(narrower)">
+                                <div id="form-messages"></div>
+								<form id="ajax-contact" action="/assets/php/mail.php" method="POST">
 									<div class="row 50%">
-										<div class="6u 12u(mobile)">
-											<input name="name" placeholder="Name" type="text">
+										<div class="6u 12u(mobilep)">
+											<input type="text" name="name" id="name" placeholder="Name" />
 										</div>
-										<div class="6u 12u(mobile)">
-											<input name="email" placeholder="Email" type="text">
+										<div class="6u 12u(mobilep)">
+											<input type="email" name="email" id="email" placeholder="Email" />
 										</div>
 									</div>
 									<div class="row 50%">
 										<div class="12u">
-											<textarea name="message" placeholder="Message"></textarea>
+											<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
 										</div>
 									</div>
 									<div class="row 50%">
 										<div class="12u">
 											<ul class="actions">
-												<li><input type="submit" value="Send Message" action=""></li>
-												<li><input type="reset" value="Clear form"></li>
+												<li><input type="submit" class="button alt" value="Send Message" /></li>
 											</ul>
 										</div>
 									</div>
 								</form>
-                                </section>
-                                    </div>
-                                </div>
-                        </article>
+							</section>
+                        </div>
 
 					</div>
 				</div>
 
 			<!-- Footer -->
-				<div id="footer-wrapper">
-					<section id="footer" class="container">
-						<div class="row">
-							<div class="12u">
+				<div id="footer">
 
-								<!-- Copyright -->
-                                <div id="footer"><!-- Defined in main.js --></div>
-                            </div>
-						</div>
-					</section>
+					<!-- Social Icons -->
+                    <div class="icons"><!-- Defined in main.js --></div>
+
+					<!-- Copyright -->
+						<div class="copyright"><!-- Defined in main.js --></div>
+
 				</div>
 
-        </div>
-
 		<!-- Scripts -->
-        <script src="/assets/js/jquery-2.1.0.min.js"></script>
+			<script src="/assets/js/jquery-2.1.0.min.js"></script>
 			<script src="/assets/js/jquery.dropotron.min.js"></script>
 			<script src="/assets/js/skel.min.js"></script>
-			<script src="/assets/js/skel-viewport.min.js"></script>
 			<script src="/assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="/assets/js/main.js"></script>
-        <script src="/assets/js/app.js"></script>
         <script>
             function initMap() {
                 var myLatlng = new google.maps.LatLng(49.282322,-123.116076);
