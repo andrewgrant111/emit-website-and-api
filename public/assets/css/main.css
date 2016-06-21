@@ -3319,6 +3319,11 @@
 
 /* Slick slider */
 
+.slick-slide {
+   margin-left:100px;
+    margin-right:100px;
+}
+
     .slick-prev:before,
     .slick-next:before {
         color: #fc8b00;
@@ -3332,6 +3337,13 @@
 
 button.slick-next.slick-arrow {
     margin-right:30px;
+}
+
+@media screen and (max-width: 480px) {
+    .slick-slide {
+        margin-left:10px;
+        margin-right:10px;
+    }
 }
 
 /* AJAX form */
@@ -3363,3 +3375,21 @@ button.slick-next.slick-arrow {
     max-width:150px;
     margin-left:-2em;
 }
+
+/*
+.drug-info {
+    float:right;
+}
+*/
+
+ul#drug {
+    padding:0;
+}
+
+ul#drug li {
+			display: inline;
+		}
+
+ul#drug li img {
+			width:30%;
+		}
