@@ -87,7 +87,14 @@
 
 //Slick slider
 $(document).ready(function(){
+    //Drug page slider, no autoplay
       $('.slider').slick({
+        dots: true,
+        slidesToShow: 1,
+          cssEase: 'linear'
+      });
+    //Home page slider, autoplay
+      $('.slider-home').slick({
         dots: true,
         slidesToShow: 1,
           autoplay: true,
