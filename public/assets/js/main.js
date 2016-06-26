@@ -106,7 +106,7 @@ $(document).ready(function(){
 //Navigation
 $("#nav").html("<ul><li><a href=\"/\">Home</a></li>" +
 "<li><a href=\"/general-medication-info/\"  id=\"general-medication-info\">General Medication Info</a><ul>" +
-"<li><a href=\"/general-medication-info/rejection\">Rejection</a></li>" +
+"<li><a href=\"/general-medication-info/rejection/\">Rejection</a></li>" +
 "<li><a href=\"/general-medication-info/vaccination-after-transplant/\">Vaccination After Transplant</a></li>" +
 "<li><a href=\"/general-medication-info/over-the-counter-medication/\">Over-the-Counter Medication</a></li>" +
 "<li><a href=\"/general-medication-info/cyotoxic-safety-precautions/\">Cytotoxic Safety Precautions</a></li>" +
