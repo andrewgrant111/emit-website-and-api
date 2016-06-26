@@ -158,7 +158,16 @@ $("#nav").html("<ul><li><a href=\"/\">Home</a></li>" +
 			}
 		}
 	}
+    
 })();
+
+//Breadcrumb navigation
+var url = window.location.pathname.substring(window.location.pathname.lastIndexOf("/")[1]);
+var currentItem = $("#nav").find("[href$='" + url + "']");
+$("#breadcrumb").html($("<a href='/'>Home</a>"));
+$(currentItem.parents("li").get().reverse()).each(function () {
+    $("#breadcrumb").append(" > ").append( $(this).children("a"));
+});
 
 //Footer social icons
 //$(".icons").html("<ul class=\"icons\"><li><a href=\"#\" class=\"icon fa-twitter\"><span class=\"label\">Twitter</span></a></li><li><a href=\"#\" class=\"icon fa-facebook\"><span class=\"label\">Facebook</span></a></li><li><a href=\"#\" class=\"icon fa-github\"><span class=\"label\">GitHub</span></a></li><li><a href=\"#\" class=\"icon fa-linkedin\"><span class=\"label\">LinkedIn</span></a></li><li><a href=\"#\" class=\"icon fa-google-plus\"><span class=\"label\">Google+</span></a></li></ul>");

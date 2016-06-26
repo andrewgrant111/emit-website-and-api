@@ -17,7 +17,7 @@
 					<div id="header">
 				
 						<!-- Nav -->
-                        <nav id="nav">
+                        <nav id="nav" class="nav-links">
                             <ul>
                                 <li><a href="/">Home</a></li>
 									<li class="current">
@@ -69,11 +69,15 @@
 <!--                                <li><a href="/contact/">Contact Us</a></li>-->
                             </ul>
                         </nav>
-
 					</div>
-
+                    
+            <div class="container">
+                            <div id="breadcrumb"></div>
+                        </div>
+            
 			<!-- Main -->
 				<section class="wrapper style1">
+                    <!-- Breadcrumbs -->
 					<div class="container">
 
 						<!-- Content -->
@@ -230,6 +234,12 @@
             <script src="/assets/js/app.js"></script>
             <script type="text/javascript" src="assets/slick/slick.min.js"></script>
             <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script>
+            $(document).ready(function () {
+    breadcrumbStateSaver(document.title, document.location.href);
+    showBreadCrumb();
+});
+        </script>
 
 	</body>
 </html>
