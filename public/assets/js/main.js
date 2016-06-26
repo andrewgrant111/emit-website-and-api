@@ -166,7 +166,7 @@ var url = window.location.pathname.substring(window.location.pathname.lastIndexO
 var currentItem = $("#nav").find("[href$='" + url + "']");
 $("#breadcrumb").html($("<a href='/'>Home</a>"));
 $(currentItem.parents("li").get().reverse()).each(function () {
-    $("#breadcrumb").append(" > ").append( $(this).children("a"));
+    $("#breadcrumb").append(" > ").append( $(this).children("a").clone());
 });
 
 //Footer social icons
