@@ -130,7 +130,10 @@ $("#nav").html("<ul><li><a href=\"/\">Home</a></li>" +
 "<li><a href=\"/anti-infection-medication/viral-infection/valganciclovir/\">Valganciclovir</a></li>" +
 "<li><a href=\"/anti-infection-medication/viral-infection/valacyclovir/\">Valacyclovir</a></li>" +
 "<li><a href=\"/anti-infection-medication/viral-infection/lamivudine/\">Lamivudine</a></li></ul></li></ul></li>" +
-"<li><a href=\"/about/\">About Us</a></li><li><a href=\"/contact/\">Contact Us</a></li></ul>");
+"<li><a href=\"/about/\">About Us</a></li>" +
+// Uncomment this line to bring back Contact page
+// "<li><a href=\"/contact/\">Contact Us</a></li></ul>" +
+"</ul>");
 
 (function() {
 	var nav = document.getElementById('nav'),
