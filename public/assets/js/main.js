@@ -134,12 +134,25 @@ $("#nav").html("<ul><li><a href=\"/\">Home</a></li>" +
 
 (function() {
 	var nav = document.getElementById('nav'),
-	anchor = nav.getElementsByTagName('a'),
-	current = window.location.pathname.split('/')[1];
-	for (var i = 0; i < anchor.length; i++) {
-		var anchorMenu = anchor[i].pathname.split('/')[1] //anchor[i].href.split('/')[3]
-		if(anchorMenu == current) {
-			anchor[i].parentElement.className = "current";
+	anchors = nav.getElementsByTagName('a'),
+	currentPaths = window.location.pathname.split('/');
+	if (currentPaths.length == 2) {
+		// Home <a> is current when there aren't any subpaths, eg. "emitcare.ca/"
+		anchors[0].parentElement.className = "current";
+	} else if (currentPaths.length > 2) {
+		// Loop through path components, eg. "anti-infection-medication" then "fungal-infection"
+		for (var i = 1; i < currentPaths.length; i++) {
+			var path = currentPaths[i]
+			// Loop through <a> tags in nav
+			for (var j = 0; j < anchors.length; j++) {
+				var anchorPaths = anchors[j].pathname.split('/')
+				var anchorLast = anchorPaths[anchorPaths.length -2]
+				// If path component matches last component of <a> element
+				if(anchorLast == path & path != "" & anchorLast != "") {
+					// Add class to parent element of <a> element, which should be an <li> element
+					anchors[j].parentElement.className = "current";
+				}
+			}
 		}
 	}
 })();
