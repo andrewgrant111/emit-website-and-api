@@ -9,7 +9,6 @@ var authCreds = require("./auth-creds.js");
 var nodemailer = require('nodemailer');
 var router = express.Router();
 
-
 // var auth = function (req, res, next) {
 //   function unauthorized(res) {
 //     res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
@@ -34,6 +33,7 @@ var DRUGS_COLLECTION = "drugs";
 var app = express();
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }))
 // app.use(cookieParser());
 // app.use(session({secret: authCreds.secret}))
 
@@ -138,12 +138,9 @@ app.post("/test", function(req,res) {
   console.log("test");
 });
 
-// Contact Form SMTP Server using NodeMailer
-
-// app.use('/sayHello', router);
-// router.post('/contact', handleSayHello);
 
 app.post("/contact", function(req, res) {
+  // Contact Form send email using Zoho SMTP Server and NodeMailer
     var transporter = nodemailer.createTransport({
         service: 'Zoho',
         auth: {
@@ -152,24 +149,21 @@ app.post("/contact", function(req, res) {
         }
     });
 
-    var text = 'Hello world from \n\n' + req.body.name;
-
     var mailOptions = {
         from: 'info@emitcare.ca',
         replyTo: req.body.email,
-        //req.body.name + ' &lt;' + req.body.email + '&gt;', // sender address
         to: 'info@emitcare.ca', // list of receivers
         subject: 'EMIT Contact Form', // Subject line
-        text: req.body.message
+        text: "From: " + req.body.name + "\nEmail: " + req.body.email + "\n\n" + req.body.message
     };
 
     transporter.sendMail(mailOptions, function(error, info){
         if(error){
-            console.log(error);
-            res.json({yo: 'error'});
+            // console.log(error);
+            res.status(500).send("There was a problem sending the message. Please send email to info@emitcare.ca");
         }else{
-            console.log('Message sent: ' + info.response);
-            res.json({yo: info.response});
+            // console.log('Message sent: ' + info.response);
+            res.status(200).send("Message sent successfully, we will reply as soon as possible!");
         };
     });
 });
