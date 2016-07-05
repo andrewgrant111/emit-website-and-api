@@ -2731,7 +2731,7 @@
 /* Footer */
 
 	#footer {
-		padding: 4em 0 8em 0;
+		padding: 2em 0em 2em 0em;
 	}
 
 		#footer a {
@@ -2764,6 +2764,7 @@
 		#footer .copyright {
 			color: #999;
 			margin-top: 1.5em;
+            padding:0 6em;
 			text-align: center;
 			font-size: 0.9em;
 		}
